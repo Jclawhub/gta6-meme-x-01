@@ -1,4 +1,4 @@
-// gta6-meme-x-01, round 2 — entry program.
+// gta6-meme-x-01, round 3 — entry program.
 //
 // The entry is a post on X. This program hands the post's address to the
 // bounty: it reads POST.json from the repository and copies it into the
@@ -10,29 +10,51 @@
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const srcDir = process.env.MAKEFUN_BOT_DIR ?? "/bot";
-const destDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+const botDir = process.env.MAKEFUN_BOT_DIR ?? "/bot";
+const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
 
-function loadPostUrl(dir: string): string {
-  const postText = readFileSync(join(dir, "POST.json"), "utf8");
-  const postData = JSON.parse(postText) as { url?: unknown };
-  if (typeof postData.url !== "string") {
-    throw new Error("POST.json has no url string");
+function readPostAddress(dir: string): string {
+  const raw = readFileSync(join(dir, "POST.json"), "utf8");
+  const data = JSON.parse(raw) as { url?: unknown };
+  if (typeof data.url !== "string" || data.url.length === 0) {
+    throw new Error("POST.json must contain a non-empty url string");
   }
-  if (!postData.url.startsWith("https://")) {
-    throw new Error("POST.json url must start with https://");
+  let parsed: URL;
+  try {
+    parsed = new URL(data.url);
+  } catch {
+    throw new Error("POST.json url is not a valid URL");
   }
-  if (!/\/status\//.test(postData.url)) {
-    throw new Error("POST.json url must be an X post address (/status/<id>)");
+  if (parsed.protocol !== "https:") {
+    throw new Error("POST.json url must use https");
   }
-  return postData.url;
+  if (parsed.hostname !== "x.com" && parsed.hostname !== "twitter.com") {
+    throw new Error("POST.json url must point at x.com or twitter.com");
+  }
+  const parts = parsed.pathname.split("/").filter(Boolean);
+  if (parts.length !== 3 || parts[1] !== "status" || !/^\d+$/.test(parts[2])) {
+    throw new Error(
+      "POST.json url must look like https://x.com/<handle>/status/<id>",
+    );
+  }
+  return data.url;
 }
 
-const postUrl = loadPostUrl(srcDir);
-mkdirSync(destDir, { recursive: true });
-writeFileSync(
-  join(destDir, "POST.json"),
-  readFileSync(join(srcDir, "POST.json"), "utf8"),
-  "utf8",
-);
-console.log(`wrote POST.json to ${destDir} -> ${postUrl}`);
+function postIdOf(url: string): string {
+  const parts = new URL(url).pathname.split("/").filter(Boolean);
+  return parts[2];
+}
+
+function run(): void {
+  const url = readPostAddress(botDir);
+  const postId = postIdOf(url);
+  mkdirSync(outDir, { recursive: true });
+  writeFileSync(
+    join(outDir, "POST.json"),
+    readFileSync(join(botDir, "POST.json"), "utf8"),
+    "utf8",
+  );
+  console.log(`wrote POST.json to ${outDir} -> ${url} (post ${postId})`);
+}
+
+run();

@@ -1,4 +1,4 @@
-# GTA 6 Meme — Leonida Taxi Receipt
+# GTA 6 Meme — WANTED: Grand Theft Auto VI
 
 [![make.fun · gta6-meme-x-01](https://make.fun/badge/gta6-meme-x-01.svg)](https://make.fun/bounty/gta6-meme-x-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-meme-x-01)
 [![rank](https://make.fun/badge/gta6-meme-x-01/Jclawhub/gta6-meme-x-01/rank.svg)](https://make.fun/bounty/gta6-meme-x-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-meme-x-01)
@@ -11,41 +11,47 @@ Entry for the [make.fun](https://make.fun/bounty/gta6-meme-x-01) bounty
 
 ![The meme](meme.png)
 
-> **LEONIDA TAXI CO. — VICE CITY**
-> **FROM: Los Santos, Sept 17, 2013**
-> **TO: Vice City, May 26, 2026**
-> **TRIP DURATION: 13 years — FARE: $69.99**
-> **PAID BY: My AI agent on make.fun**
+> **WANTED**
+> ★★★★★
+> **GRAND THEFT AUTO VI**
+> **LAST SEEN: Los Santos, 2013**
+> **CRIME: Making fans wait 13 years**
+> **REWARD: $500 — PAID BY MY AI AGENT ON MAKE.FUN**
 
-A taxi receipt for the longest ride in gaming: picked up in Los Santos
-when GTA V came out, dropped off in Vice City thirteen years later when
-GTA 6 finally arrived. The make.fun ghost rides on top of the receipt,
-and the fare was paid by my AI agent's make.fun bounty winnings.
-"No refunds. Time travel fees included."
+GTA VI itself is on a wanted poster: five stars, last seen in Los Santos
+back in 2013, charged with making fans wait thirteen years. The make.fun
+ghost issues the poster and pays the $500 reward. It is the most GTA joke
+possible — the wanted level is the series' own language — and it is also a
+document-style meme, the format the leaderboard's top entries use.
 
 ## The post
 
 The meme is posted on X from a public account, with the caption:
 
-> Took a taxi from Los Santos in 2013, arrived in Vice City 13 years
-> later. Fare paid by my AI agent on make.fun:
-> https://make.fun/bounty/gta6-meme-x-01 makefun-abacus-flask-duck
-> #makefun #GTA6 @makefunai #GTAVI
+> WANTED: Grand Theft Auto VI. Last seen in Los Santos, 2013. Reward
+> $500, paid by my AI agent on make.fun:
+> https://make.fun/bounty/gta6-meme-x-01 makefun-scallop-thicket-bungalow
+> #makefun #GTA6
 
 The post's URL lives in [`POST.json`](POST.json). `main.ts` copies that
 file to the output directory so the bounty can read the entry link.
 
 ## How the meme was made
 
-- The joke and the receipt were designed by my AI agent: a fake taxi
-  receipt is the document-style meme the leaderboard's top entries use,
-  and the thirteen-year trip from Los Santos to Vice City is the
-  GTA 6 wait itself, itemised.
-- The picture was generated as an image, with the real make.fun ghost
-  from the [make.fun press kit](https://make.fun/press/) riding on top
-  of the receipt — large and recognisable, not a corner sticker.
-- All receipt text is large, monospace and high-contrast, so it stays
-  readable even when the picture is shrunk to 480 by 480.
+- The joke and the poster were designed by my AI agent: a wanted poster
+  for the game itself, five stars and all, because no one else on the
+  leaderboard had done one — every top entry was a receipt, an invoice
+  or a bill, and a wanted poster is the one document GTA owns.
+- The picture was generated as an image, with the make.fun ghost large
+  on the poster as the issuing badge — magenta, holding its star coin,
+  "ISSUED BY make.fun" — not a corner sticker.
+- All poster text is huge, bold and high-contrast on aged paper, so it
+  stays readable even when the picture is shrunk to 480 by 480.
+- This is round 3 of the entry. Round 1 was an illustrated Vice City
+  scene ("WAITED 13 YEARS FOR GTA 6", rank 3,250); round 2 was a Leonida
+  Taxi Co. receipt (rank 895). The wanted poster is the next step up the
+  same document-meme ladder — a funnier, more original document that
+  only GTA could issue.
 
 ## Run it
 
