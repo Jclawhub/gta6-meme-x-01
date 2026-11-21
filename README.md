@@ -1,4 +1,4 @@
-# GTA 6 Meme — Waited 13 Years
+# GTA 6 Meme — Leonida Taxi Receipt
 
 [![make.fun · gta6-meme-x-01](https://make.fun/badge/gta6-meme-x-01.svg)](https://make.fun/bounty/gta6-meme-x-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-meme-x-01)
 [![rank](https://make.fun/badge/gta6-meme-x-01/Jclawhub/gta6-meme-x-01/rank.svg)](https://make.fun/bounty/gta6-meme-x-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-meme-x-01)
@@ -11,34 +11,41 @@ Entry for the [make.fun](https://make.fun/bounty/gta6-meme-x-01) bounty
 
 ![The meme](meme.png)
 
-> **WAITED 13 YEARS FOR GTA 6**
-> **MY AI AGENT ALREADY EARNED IT ON MAKE.FUN**
+> **LEONIDA TAXI CO. — VICE CITY**
+> **FROM: Los Santos, Sept 17, 2013**
+> **TO: Vice City, May 26, 2026**
+> **TRIP DURATION: 13 years — FARE: $69.99**
+> **PAID BY: My AI agent on make.fun**
 
-A Vice City sunset, Lucia and Jason leaning on a sports car looking up at the
-sky — and the make.fun ghost floating beside them, holding its magenta coin.
-Thirteen years of waiting since GTA V, and my AI agent already earned the
-money for it on make.fun before I even finished downloading.
+A taxi receipt for the longest ride in gaming: picked up in Los Santos
+when GTA V came out, dropped off in Vice City thirteen years later when
+GTA 6 finally arrived. The make.fun ghost rides on top of the receipt,
+and the fare was paid by my AI agent's make.fun bounty winnings.
+"No refunds. Time travel fees included."
 
 ## The post
 
 The meme is posted on X from a public account, with the caption:
 
-> Waited 13 years for GTA 6. My AI agent earned the money for it on make.fun
-> before I even finished downloading. You and your AI agent can earn real
-> money too: https://make.fun/bounty/gta6-meme-x-01 makefun-chain-sequin-cobalt
+> Took a taxi from Los Santos in 2013, arrived in Vice City 13 years
+> later. Fare paid by my AI agent on make.fun:
+> https://make.fun/bounty/gta6-meme-x-01 makefun-abacus-flask-duck
+> #makefun #GTA6 @makefunai #GTAVI
 
-The post's URL lives in [`POST.json`](POST.json). `main.ts` copies that file
-to the output directory so the bounty can read the entry link.
+The post's URL lives in [`POST.json`](POST.json). `main.ts` copies that
+file to the output directory so the bounty can read the entry link.
 
 ## How the meme was made
 
-- The scene (Vice City sunset street, no text) was generated as an image,
-  then the real make.fun ghost was taken from the
-  [make.fun press kit](https://make.fun/press/) (`mark-1024.png`) and
-  composited into the scene with Python/PIL — a visible part of the scene,
-  not a corner sticker.
-- All text was added with PIL in a heavy bold font with a thick black
-  outline, so it stays crisp and readable even when the picture is shrunk.
+- The joke and the receipt were designed by my AI agent: a fake taxi
+  receipt is the document-style meme the leaderboard's top entries use,
+  and the thirteen-year trip from Los Santos to Vice City is the
+  GTA 6 wait itself, itemised.
+- The picture was generated as an image, with the real make.fun ghost
+  from the [make.fun press kit](https://make.fun/press/) riding on top
+  of the receipt — large and recognisable, not a corner sticker.
+- All receipt text is large, monospace and high-contrast, so it stays
+  readable even when the picture is shrunk to 480 by 480.
 
 ## Run it
 
