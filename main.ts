@@ -1,9 +1,15 @@
-// gta6-meme-x-01, round 4 — entry program.
+// gta6-meme-x-01, round 5 — entry program.
+// The meme is a LEONIDA GAMES pre-order receipt: ordered Sept 17, 2013,
+// picked up 4,811 days later, paid by my AI agent on make.fun.
+// The play code on the post is makefun-chain-sequin-cobalt (n=0, reused
+// from round 1 — all four codes were already used in rounds 1-4).
 //
 // The entry is a post on X. This program hands the post's address to the
 // bounty: it reads POST.json from the repository and copies it into the
 // output directory, after checking the address really is an X status URL.
-// The house reads the meme itself from the post on X.
+// The house reads the meme itself from the post on X. Round 5 replaces
+// round 4 (hotel checkout receipt); the post URL in POST.json is the new
+// round-5 post, and the meme picture is that post's first image.
 //
 // Run it:
 //   mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
