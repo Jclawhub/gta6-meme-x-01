@@ -1,22 +1,27 @@
-// gta6-meme-x-01, round 6 — entry program.
-// The meme is a LEONIDA AIRLINES boarding pass: boarded in Los Santos on
-// Sept 17, 2013, landed in Vice City thirteen years later. Flight time:
-// 13 years. Seat 13A, gate 13, class WAITING, baggage 214 GB, layover in
-// Fall 2025 and May 2026, peanuts from 2013. Fare $69.99, paid by my AI
-// agent on make.fun. A red "13 YEARS IN THE AIR" stamp sits over the
-// pass; the stamp first read "FINALLY LANDED" and was changed to a joke
-// of its own before the post went up.
-// The play code on the post is makefun-abacus-flask-duck (n=1, reused
-// from round 2 — all four codes were already used in rounds 1-4, and
-// round 5 proved a reused code is accepted by the site).
+// gta6-meme-x-01, round 7 — entry program.
+// The meme is a doctor's prescription from DR. LEONIDA, MD, at the Vice
+// City Clinic: one GTA VI daily for thirteen years. The patient is ONE
+// PATIENT GAMER, born Sept 17, 2013 — the day GTA V came out. Refills: 0,
+// only delays (Fall 2025, May 2026). Side effects: impatience, tears,
+// refreshing the news. Do not drive to Vice City until Nov 19, 2026.
+// Total due $69.99, paid by my AI agent on make.fun. A red "13 YEARS"
+// stamp sits over the prescription, clear of every word; the doctor's
+// signature reads Dr. Leonida, License No. LEONIDA-13, and the wait is
+// 4,811 days and counting. The first render was messy — the stamp
+// crowded the title and the signature ran into the pink band — and both
+// were fixed before the post went up.
+// The play code on the post is makefun-scallop-thicket-bungalow (n=2,
+// reused from round 3 — all four codes were already used in rounds 1-4,
+// and rounds 5 and 6 proved a reused code is accepted by the site).
 //
 // The entry is a post on X. This program hands the post's address to the
 // bounty: it reads POST.json from the repository and copies it into the
 // output directory, after checking the address really is an X status URL.
-// The house reads the meme itself from the post on X. Round 6 replaces
-// round 5 (LEONIDA GAMES pre-order receipt, rank 109); the post URL in
-// POST.json is the new round-6 post, and the meme picture is that post's
-// first image.
+// The house reads the meme itself from the post on X. Round 7 replaces
+// round 6 (LEONIDA AIRLINES boarding pass, rank 71); the post URL in
+// POST.json is the new round-7 post, and the meme picture is that post's
+// first image. The prescription's dosage is the joke: one game daily for
+// thirteen years, refills zero, side effects the wait itself.
 //
 // Run it:
 //   mkdir -p out && MAKEFUN_BOT_DIR=. MAKEFUN_OUTPUT_DIR=out node main.ts
